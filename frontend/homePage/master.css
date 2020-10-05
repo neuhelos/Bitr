@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after{box-sizing:border-box;}
+a{text-decoration:underline; color:inherit; cursor:pointer;}
+figure{margin:0;}
+input::-moz-focus-inner {border:0; padding:0; margin:0;}
+ul, ol, dd, li {margin:0; padding:0; list-style:none;}
+h1, h2, h3, h4, h5, h6{margin:0; font-size:inherit; font-weight:inherit;}
+p{margin:0;}
+cite {font-style:normal;}
+fieldset{border-width:0; padding:0; margin:0;}
+/* CSS Reset code provided by Elad Shechter */
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 150px 2fr 50px;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+        "lmargin nav rmargin"
+        "lmargin main rmargin"
+        "lmargin footer rmargin";
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.lSidePanel {
+    grid-area: lmargin;
+    background: rgb(255,231,57);
+    background: linear-gradient(90deg, rgba(255,231,57,1) 0%, rgba(14,165,160,1) 50%, rgba(67,101,162,1) 100%);
+    /* background-image: url("../images/Left Side Gradient Panel.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navBar {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profileButton {
+    background-image: url("../images/LemonSlice.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    height: 75%;
+    width: 75%;
+    border: none;
+    cursor: pointer;
+    padding: 0
+}
+
+.openPostFormButton {
+    background-image: url("../images/AddPostButton.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    color: white;
+    height: 75%;
+    width: 75%;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 0
+}
+
+.openPostFormButton:focus, .profileButton:focus {
+    outline: none;
+}
+
+.userSearchForm {
+    width: 100%
+}
+
+#searchInput {
+    width: 100%;
+    line-height: 2em;
+    text-align: center;
+}
+
+#searchInput:focus {
+    outline: solid #FFD54F 2px
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+ul img {
+    margin: 5px;
+}
+
+ul li {
+    margin: 5px
+}
+
+.rSidePanel {
+    grid-area: rmargin;
+    background: rgb(255,231,57);
+    background: linear-gradient(270deg, rgba(255,231,57,1) 0%, rgba(14,165,160,1) 50%, rgba(67,101,162,1) 100%);
+    /* background-image: url("../images/Right Side Gradient Panel.png"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.addPostFormContainer {
+    display: none;
+    position: sticky;
+    margin: 10%;
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+    z-index: 9;
+}
+
+.addPostForm {
+    max-width: 400px;
+    padding: 10%;
+    background-color: rgba( 255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.addPostForm input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.addPostForm input[type=text]{
+    outline: solid #FFD54F 2px
+}
+
+.addPostForm h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+.addPostForm label {
+    font-weight: 100;
+    float: left
+}
+
+.addPostButton {
+    background-color: #52B6D5;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    padding: 15px 15px;
+    border: solid #f1f1f1 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.addPostCancelButton {
+    background-color: #F6B605;
+    color: black;
+    text-shadow:
+    -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+    padding: 15px 15px;
+    border: solid #f1f1f1 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.addPostCancelButton:hover, .addPostButton:hover, .openPostFormButton:hover, .homePageButton:hover  {
+    opacity: 1;
+}
+
+.addPostCancelButton:focus, .addPostButton:focus, .openPostFormButton:focus, .homePageButton:focus  {
+    outline:none
+}
+
+footer {
+    grid-area: footer;
+    height: 100%;
+    background-color: white;
+    padding: 0 10px;
+    padding-top: 15px;
+    border-top: 1px solid #e6ecf0;
+  }
+  
+  footer a {
+    color: #1c7599;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  footer #copyright {
+    color: #1c7599;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .footer {
+    width: 100%;
+    list-style-type: none;
+    font-family: "Poppins", "sans-serif";
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 50px;
+  }
+
+  img {
+      height: 400px;
+      width: 400px;
+  }
+
+ul {
+    text-align: center;
+}

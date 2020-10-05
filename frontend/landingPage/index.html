@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js" async></script>
+    <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../normal.css"></link>
+    <link rel="stylesheet" href="master.css"> </link>
+    
+    <title> BITR </title>
+</head>
+<body>
+        <div class="left">
+            <div id="image"></div>
+            
+            <div class="leftSideText">
+                <div> 
+                    <h1 class="brand"> BITR </h1>
+                </div>
+                <div>
+                    <div class="slogan"> Because When Life </div> 
+                    <div class="slogan"> Gives You Lemons, </div>
+                    <div class="slogan"> You Throw Them </div>
+                    <div class="slogan"> Right Back! </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="formSection">
+                <form action="submit" id="form">
+                    <div>
+                        <h1> Sign In </h1>
+                        <hr>
+                        <div class="formHolder">
+                            <div class="userInput">
+                                <label for="username"> Username </label>
+                                <input type="text" name="username" placeholder="Enter Username" id="username" required>
+                            </div>
+
+                            <div class="userInput">
+                                <label for="password"> Password </label>
+                                <input type="password" name="password" placeholder="Enter Password" id="">
+                            </div>
+            
+                            <button class="buttonsignIn" type="submit"> Sign In </button>
+                            <p class="centered"> Don't have an account? <a href="../signUpPage/index.html"> Sign Up</a></p>
+                            <p class="centered" id="invalidLogin"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    <footer>
+        <ul class="footer">
+            <li><a href=""> About </a></li>
+            <li><a href=""> Developers </a></li>
+            <li id="copyright"> &copy;2020 The Motherf*cking Team </li>
+        </ul>
+    </footer>
+</body>
+</html>

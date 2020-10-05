@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./index.js" async></script>
+  <link rel="icon" href="../images/lemon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../normal.css">
+  <link rel="stylesheet" href="./master.css">
+  <title>BITR Profile</title>
+</head>
+
+<body>
+  <div class="lSidePanel">
+    <!-- <h1 class="brand">BITR</h1> -->
+  </div>
+
+  <nav class="navBar">
+    <button class="homePageButton" onclick="window.location.href = '../homePage/index.html' ">HOME</button>
+    <form action="submit" class="userSearchForm">
+      <input id="searchInput" type="text" placeholder="Search Users">
+    </form>
+    <button class="openPostFormButton" onclick="openForm()">+</button>
+  </nav>
+
+  
+  <header>
+    <div id="profileHead">
+      <img id="profilePic" src="" alt="">  
+      <h3 id="username"></h3>
+    </div>
+    <div id="countsDiv">
+      <button id="follow">HATE</button>
+      <p id="followerCount">Hater Count</p>
+      <p id="dislikeCount">Dislike Count</p>
+    </div>
+  </header>
+  
+  <main>
+    
+  </main>
+
+  <div class="rSidePanel">
+    <div class="addPostFormContainer">
+        <form  class="addPostForm">
+          <h2>ADD HATER POST</h2>
+            
+          <label for="ImageURL"><b>Image URL</b></label>
+          <input id="addImageURL" type="text" placeholder="Enter URL" name="imageURL" required>
+          <label for="ImageCaption"><b>Caption</b></label>
+          <input id="addImageCaption" type="text" placeholder="Enter Caption" name="imageCaption">
+      
+          <button type="submit" class="addPostButton">Post</button>
+          <button type="button" class="addPostCancelButton" onclick="closeForm()">Cancel</button>
+        </form>
+      </div>
+  </div>
+
+
+  <footer>
+    <ul class="footer">
+        <li><a href=""> About </a></li>
+        <li><a href=""> Developers </a></li>
+        <li id="copyright"> &copy;2020 The Motherf*cking Team </li>
+    </ul>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after{box-sizing:border-box;}
+a{text-decoration:none; color:inherit; cursor:pointer;}
+figure{margin:0;}
+input::-moz-focus-inner {border:0; padding:0; margin:0;}
+ul, ol, dd, li {margin:0; padding:0; list-style:none;}
+h1, h2, h3, h4, h5, h6{margin:0; font-size:inherit; font-weight:inherit;}
+p{margin:0;}
+cite {font-style:normal;}
+fieldset{border-width:0; padding:0; margin:0;}
+/* CSS Reset code provided by Elad Shechter */
+
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: grid;
+  grid-template-rows: 1fr 50px;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas: 
+      "left right"
+      "footer footer";
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+textarea, select, input, button {
+  outline: none;
+}
+
+p {
+  font-weight: 400;
+}
+
+.centered {
+  text-align: center;
+}
+
+.left {
+  min-height: 100%;
+  grid-area: left;
+  background-image: url("../images/ShadyTIme.png");
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-color: #46B3EA;
+}
+
+
+
+.right {
+  min-height: 100%;
+  grid-area: right;
+  /* flex-grow: 1; */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px
+}
+
+.formHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formSection {
+  width: 75%
+}
+
+.userInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  padding: 10px
+}
+
+.userInput input {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+label {
+  font-size: 12px;
+  color: grey;
+  padding-bottom: 10px;
+}
+
+
+button {
+  width: 100%;
+  background-color: #ffd54f;
+  color: black;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: 800; 
+}
+
+button:hover{
+  background-color: #f6b605;
+  transition: all 1s;
+}
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold
+}
+
+footer {
+  grid-area: footer;
+  height: 100%;
+  background-color: white;
+  padding: 0 10px;
+  padding-top: 15px;
+  border-top: 1px solid #e6ecf0;
+}
+
+footer a {
+  color: #1c7599;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+footer #copyright {
+  color: #1c7599;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer {
+  width: 100%;
+  list-style-type: none;
+  font-family: "Poppins", "sans-serif";
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 50px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
